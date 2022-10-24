@@ -1,0 +1,1 @@
+["^(.*)RagePluginHook(.*).log$", "^(.*)\\.(zip|rar|exe|dll|7z)$"]
