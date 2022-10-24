@@ -175,7 +175,7 @@ while True:
     print("\n----------\n")
     choice = input(
         colored(
-            "What would you like to do with the files? (Enter A Number)\n\n1. Cancel\n2. Exclude Files From Deletion\n3. Remove All Found Files\n\n> ",
+            "What would you like to do with the files? (Enter A Number)\n\n1. Cancel\n2. Exclude Files From Deletion\n3. Remove All Non-Excluded Files\n\n> ",
             attrs=["bold"],
         )
     )
