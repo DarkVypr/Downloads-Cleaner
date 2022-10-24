@@ -21,9 +21,20 @@ clearscreen = (
 )
 clearscreen()
 
+# Check if the user provided a downloads folder location.
+folderLocation = config["Locations"]["DownloadsFolder"]
+if not folderLocation or not os.path.isdir(folderLocation):
+    exit(
+        colored(
+            "Please put the location of your downloads folder in the settings.ini, and ensure that it is the correct directory without quotes.",
+            "red",
+            attrs=["bold", "underline"],
+        )
+    )
+
 # Get the downloads folders contents.
 def downloadsFolder():
-    downloads = pathlib.Path(config["Locations"]["DownloadsFolder"])
+    downloads = pathlib.Path(folderLocation)
     return [str(i) for i in list(downloads.iterdir())]
 
 
